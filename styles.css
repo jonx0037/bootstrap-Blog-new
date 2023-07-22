@@ -379,16 +379,11 @@ select:disabled {
   display: none !important;
 }
 
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-}
 button:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled) {
+  /* Styles for button when not disabled */
   cursor: pointer;
 }
 
@@ -439,9 +434,9 @@ legend + * {
   height: auto;
 }
 
-[type=search] {
+input[type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: textfield;
+  appearance: textfield;
 }
 
 /* rtl:raw:
@@ -460,9 +455,11 @@ legend + * {
   padding: 0;
 }
 
-::file-selector-button {
+.selector {
   font: inherit;
   -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 }
 
 output {
